@@ -34,7 +34,6 @@ export function App() {
     api
       .get<GenreResponseProps>(`genres/${selectedGenreId}`)
       .then((response) => {
-        console.log(response.data);
         setSelectedGenre(response.data);
       });
   }, [selectedGenreId]);
