@@ -8,6 +8,7 @@ import './styles/global.scss';
 import './styles/sidebar.scss';
 import './styles/content.scss';
 import { api } from './services/api';
+import { Header } from './components/Header';
 
 interface GenreResponseProps {
   id: number;
@@ -51,12 +52,7 @@ export function App() {
       />
 
       <div className='container'>
-        <header>
-          <span className='category'>
-            Categoria:<span> {selectedGenre.title}</span>
-          </span>
-        </header>
-
+        <Header selectedGenre={selectedGenre} />
         <Content selectedGenreId={selectedGenreId} />
       </div>
     </div>
